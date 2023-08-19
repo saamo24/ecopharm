@@ -51,7 +51,3 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.name
-
-User._meta.get_field('user_permissions').remote_field.related_name = 'custom_user_permissions'
-User._meta.get_field('groups').remote_field.related_name = 'custom_user_groups'
-
