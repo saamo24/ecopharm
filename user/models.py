@@ -9,7 +9,7 @@ class UserManager(BaseUserManager):
 
     def create_user(self, username, password=None, **extra_fields):
         if not username:
-            raise ValueError('Email is Required')
+            raise ValueError('Username is Required')
         user = self.model(username=username, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
@@ -37,7 +37,7 @@ class User(AbstractUser):
     id = models.UUIDField(primary_key=True, unique=True, default=uuid4, editable=False)
     name = models.CharField(max_length=100, unique=False)
     email = models.EmailField(max_length=100)
-    phone_number = models.CharField(max_length=12)
+    phone_number = models.CharField(max_length=13)
     date_joined = models.DateTimeField(auto_now_add=True)
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
