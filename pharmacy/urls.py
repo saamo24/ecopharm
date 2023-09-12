@@ -22,4 +22,5 @@ from rest_framework.authtoken import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/',include('user.urls')),
+    path('medicine/', include('medicines.urls')),
 ]
