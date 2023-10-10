@@ -1,4 +1,4 @@
-#!/Users/samvelabrahamyan/Documents/ecopharm/ecopharm/bin/python3.11
+#!/Users/samvelabrahamyan/projects/ecopharm/ecopharm/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
